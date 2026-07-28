@@ -5,6 +5,5 @@ set -e
 # wait $!
 php artisan key:generate
 wait $!
-php artisan migrate
-wait $!
+php artisan migrate --force
 php artisan serve --host=0.0.0.0 --port=8000
